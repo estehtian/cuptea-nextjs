@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #050b0d;
+  --panel: #0b171a;
+  --panel-2: #102226;
+  --ink: #effffb;
+  --muted: #9bb7b2;
+  --teal: #36f2d0;
+  --teal-2: #12bda9;
+  --line: rgba(111, 241, 218, .17);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 75% 0%, rgba(16, 189, 169, .15), transparent 35rem),
+    radial-gradient(ellipse at 0% 45%, rgba(18, 105, 103, .12), transparent 32rem),
+    var(--bg);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+a { color: inherit; text-decoration: none; }
+button, input, textarea, select { font: inherit; }
+::selection { background: var(--teal); color: #03110f; }
+.container { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+.eyebrow { color: var(--teal); text-transform: uppercase; letter-spacing: .22em; font-size: .72rem; font-weight: 800; }
+.gradient-text { background: linear-gradient(100deg, #f3fffc 10%, #48f6d7 55%, #a1fff0); -webkit-background-clip: text; color: transparent; }
+.glass { background: linear-gradient(145deg, rgba(17, 42, 44, .88), rgba(7, 17, 20, .88)); border: 1px solid var(--line); box-shadow: 0 20px 80px rgba(0,0,0,.24); backdrop-filter: blur(18px); }
+.grid-glow { background-image: linear-gradient(rgba(90, 230, 209, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(90, 230, 209, .045) 1px, transparent 1px); background-size: 42px 42px; mask-image: linear-gradient(to bottom, black, transparent 90%); }
+.btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; border-radius: 999px; background: var(--teal); color: #031311; padding: .9rem 1.35rem; font-weight: 900; transition: transform .2s, box-shadow .2s; box-shadow: 0 0 28px rgba(54,242,208,.2); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 38px rgba(54,242,208,.38); }
+.btn-secondary { display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 999px; padding: .9rem 1.35rem; color: var(--ink); }
+.section { padding: 6rem 0; }
+.card { border: 1px solid var(--line); background: rgba(10, 25, 28, .78); border-radius: 24px; }
+@media (max-width: 640px) { .container { width: min(100% - 28px, 1160px); } .section { padding: 4.2rem 0; } }
